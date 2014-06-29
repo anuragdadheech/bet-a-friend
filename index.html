@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="bower_components/platform/platform.js"></script>
+        <link rel="import" href="bower_components/paper-input/paper-input.html">
+        <link rel="import" href="bower_components/paper-button/paper-button.html">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+    </head>
+    <style type="text/css">
+        #login-button {
+            background: #4285f4;
+            color: #fff;
+        }
+
+        #login-button:hover {
+            background: #2a56c6;
+        }
+
+        #login-button::shadow #ripple {
+            color: #2a56c6;
+        }
+        #login-button::shadow #content{
+            text-transform: initial; 
+        }
+        .input {
+            text-align: left;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+
+    <body>
+        <div align = "center">
+            <paper-input class = "input" name = "username" label="Username" floatingLabel = true></paper-input>
+        </div>
+        <div align = "center">
+            <paper-input class = "input" id = "login-password" name = "password" label="Password" type = "password" floatingLabel = true></paper-input>
+        </div>
+        <div align = "center">
+            <paper-button label="Login" id="login-button" ></paper-button>
+        </div>
+    </body>
+    <script type="text/javascript">
+        window.addEventListener('polymer-ready', function(e) {
+            document.getElementById("login-password").shadowRoot.querySelector('shadow').getDistributedNodes()[7].setAttribute('type','password')
+        });
+    </script>
+</html>
+
