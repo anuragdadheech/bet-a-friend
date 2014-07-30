@@ -1,0 +1,51 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*login page*/
+.body-login {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/cubes.png);
+}
+#login-button {
+    background: #6512e1;
+    color: #fff;
+}
+
+#login-button:hover {
+    background: #15042e;
+}
+
+#login-button::shadow #ripple {
+    color: #fff;
+}
+#login-button::shadow #content{
+    text-transform: initial; 
+}
+.input {
+    text-align: left;
+}
+.input::shadow .focusedColor {
+    color: #6512e1;
+    background: #6512e1;
+}
+.login-logo {
+    width: 75%;
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+.login-element {
+    width: 75%;
+    max-width: 400px;
+}
+
+/*login page ends*/
