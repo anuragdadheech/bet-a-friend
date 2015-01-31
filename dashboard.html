@@ -2,18 +2,52 @@
 <html>
     <head>
         <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <link rel="import" href="bower_components/paper-input/paper-input.html">
-        <link rel="import" href="bower_components/paper-button/paper-button.html">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+        
+        <link rel="import" href="bower_components/font-roboto/roboto.html">
+        <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+        <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+        
         <link rel="stylesheet" href="resources/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     </head>
 
     <body>
         <div class = "body-dashboard">
-            
+            <core-scroll-header-panel condenses>
+
+                <core-toolbar class="tall">
+
+                    <core-icon-button icon="arrow-back"></core-icon-button>
+                    <div flex></div>
+                    <core-icon-button icon="search"></core-icon-button>
+                    <core-icon-button icon="more-vert"></core-icon-button>
+                    <div class="bottom indent title">Title</div>
+
+                </core-toolbar>
+
+                <div class="content">
+
+                    <sample-content size="100"></sample-content>
+
+                </div>
+
+            </core-scroll-header-panel>
+
         </div>
     </body>
     <script type="text/javascript" src = "resources/scripts/jquery-1.11.2.js"></script>
+    <script>
+
+        // custom transformation: scale header's title
+        var titleStyle = document.querySelector('.title').style;
+        addEventListener('core-header-transform', function(e) {
+          var d = e.detail;
+          var m = d.height - d.condensedHeight;
+          var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
+          titleStyle.transform = titleStyle.webkitTransform =
+              'scale(' + scale + ') translateZ(0)';
+        });
+
+    </script>
 </html>
 
