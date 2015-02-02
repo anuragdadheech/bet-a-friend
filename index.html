@@ -18,7 +18,10 @@
                 <paper-input class = "input login-element" name = "username" label="Username" floatingLabel = true></paper-input>
             </div>
             <div align = "center">
-                <paper-input class = "input login-element" id = "login-password" name = "password" label="Password" type = "password" floatingLabel = true></paper-input>
+               <!--  <paper-input class = "input login-element" id = "login-password" name = "password" label="Password" type = "password" floatingLabel = true></paper-input> -->
+                <paper-input-decorator floatingLabel = true label="Password" class = "input login-element">
+                    <input id="password" is="core-input" name="password" type="password" value=""/>
+                </paper-input-decorator>
             </div>
             <div align = "center">
                 <paper-button label="Login" class = "login-element" id="login-button" ></paper-button>
