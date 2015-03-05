@@ -5,13 +5,13 @@
     "polymer": "Polymer/polymer#^0.5",
     "highlightjs": "*"
   },
-  "version": "0.5.4",
+  "version": "0.5.5",
   "homepage": "https://github.com/PolymerLabs/highlightjs-element",
-  "_release": "0.5.4",
+  "_release": "0.5.5",
   "_resolution": {
     "type": "version",
-    "tag": "0.5.4",
-    "commit": "7c7bc1f894cb0dc523a2157d0a3dc324f9077d25"
+    "tag": "0.5.5",
+    "commit": "600ac6c95949ca948b4453746e709a9b79f805d9"
   },
   "_source": "git://github.com/PolymerLabs/highlightjs-element.git",
   "_target": ">=0.3.0 <1.0.0",
